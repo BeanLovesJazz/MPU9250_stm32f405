@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "inv_mpu_dmp_motion_driver.h": "c",
+        "math.h": "c",
+        "inv_mpu.h": "c",
+        "mpu9250.h": "c",
+        "stdlib.h": "c"
+    }
+}
