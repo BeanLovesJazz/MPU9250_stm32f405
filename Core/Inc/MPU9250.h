@@ -249,6 +249,7 @@ void MPU9250_SetGyroRange(GyroRange range);
 void MPU9250_SetAccelRange(AccelRange range);
 
 void Calibration_IMU();
+void Calib_magnetometer();
 
 static void MPU9250_NewVal(int16_t* buf,int16_t val);
 static int16_t MPU9250_GetAvg(int16_t* buf);

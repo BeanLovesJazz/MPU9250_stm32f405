@@ -440,6 +440,64 @@ void Calibration_IMU()
 	}
 }
 
+void Calib_magnetometer()
+{
+	//int16_t mag_max[3] = {-32767, -32767, -32767}, mag_min[3] = {32767, 32767, 32767};
+
+	//int16_t mag_max[3] = {344.0,392.0,51.0},mag_min[3] = {-115.0,24.0,-323.0};
+	int16_t mag_max[3] = { 332.0,377.0, 61.0},mag_min[3] = {-21.0,25.0,-304.0};
+	mag_offset[3] = 0;
+	/*uint8_t raw_data[7];
+	uint8_t reg_ST1 = ST1;
+	uint8_t mag_address = MAG_ADDRESS_DEFAULT;
+	uint8_t reg = XOUT_L;
+	uint16_t i = 0;
+	for (i = 0; i < 1500;i++)
+	{
+		while(HAL_I2C_Master_Transmit(&hi2c1,(uint16_t)mag_address,&reg_ST1,1,1000) != HAL_OK);
+		while(HAL_I2C_Master_Receive(&hi2c1,(uint16_t)mag_address,raw_data,1,1000) != HAL_OK);
+		if (raw_data[0] & 0x01)
+		{
+			while(HAL_I2C_Master_Transmit(&hi2c1,(uint16_t)mag_address,&reg,1,1000) != HAL_OK);
+			while(HAL_I2C_Master_Receive(&hi2c1,(uint16_t)mag_address,raw_data,7,1000) != HAL_OK);
+			// Read the six raw data and ST2 registers sequentially into data arra
+			if(!(raw_data[6] & 0x08))// Check if magnetic sensor overflow set, if not then report data
+			{
+				Mag_x = (int16_t)((int16_t)(raw_data[1]<<8) | raw_data[0] );
+				Mag_y = (int16_t)((int16_t)(raw_data[3]<<8) | raw_data[2] );
+				Mag_z = (int16_t)((int16_t)(raw_data[5]<<8) | raw_data[4] );
+			}
+		}
+	int16_t mag_temp[3] = {Mag_x,Mag_y,Mag_z};
+	for (int j = 0;j < 3;j++)
+	{
+		if (mag_temp[j] > mag_max[j])  mag_max[j] = mag_temp[j];
+		if (mag_temp[j] < mag_min[j])  mag_min[j] = mag_temp[j];
+	}
+		HAL_Delay(12);
+	}*/
+	// Get hard iron correction
+	mag_bias[0] = (mag_max[0] + mag_min[0])/2;
+	mag_bias[1] = (mag_max[1] + mag_min[1])/2;
+	mag_bias[2] = (mag_max[2] + mag_min[2])/2;
+
+	mag_offset[0] = (float)(mag_bias[0]) * mag_sensitivity * asax;
+	mag_offset[1] = (float)(mag_bias[1]) * mag_sensitivity * asay;
+	mag_offset[2] = (float)(mag_bias[2]) * mag_sensitivity * asaz;
+	// Get soft iron correction estimate
+	mag_scale[0] = (mag_max[0] - mag_min[0])/2;
+	mag_scale[1] = (mag_max[1] - mag_min[1])/2;
+	mag_scale[2] = (mag_max[2] - mag_min[2])/2;
+
+	scale_x = 0,scale_y = 0,scale_z = 0;
+	float avg_rad = mag_scale[0] + mag_scale[1] + mag_scale[2];
+	avg_rad /= 3.0;
+
+	scale_x = avg_rad/(float)mag_scale[0];    //1.14
+	scale_y = avg_rad/(float)mag_scale[1];  // 1.00
+	scale_z = avg_rad/(float)mag_scale[2]; // 0.89
+}
+
 static void MPU9250_NewVal(int16_t* buf,int16_t val) {
   	buf[Wr_Index] = val;
 }
