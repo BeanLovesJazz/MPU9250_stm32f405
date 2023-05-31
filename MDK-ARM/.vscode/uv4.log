@@ -1,43 +1,66 @@
 *** Using Compiler 'V6.19', folder: 'D:\Program Files\Keil\ARM\ARMCLANG\Bin'
-Rebuild target 'GPIO_LED'
-assembling startup_stm32f415xx.s...
-compiling gpio.c...
-compiling stm32f4xx_hal_msp.c...
-compiling spi.c...
-compiling tim.c...
-compiling stm32f4xx_it.c...
-compiling usart.c...
-compiling main.c...
-compiling Madgwick.c...
-../Core/Src/MPU9250.c(544): warning: using integer absolute value function 'abs' when argument is of floating point type [-Wabsolute-value]
-                if (abs(sinp) >= 1)
+Build target 'GPIO_LED'
+../Core/Src/MPU9250.c(449): error: use of undeclared identifier 'mag_offset'
+        mag_offset[3] = 0;
+        ^
+../Core/Src/MPU9250.c(480): error: use of undeclared identifier 'mag_bias'
+        mag_bias[0] = (mag_max[0] + mag_min[0])/2;
+        ^
+../Core/Src/MPU9250.c(481): error: use of undeclared identifier 'mag_bias'
+        mag_bias[1] = (mag_max[1] + mag_min[1])/2;
+        ^
+../Core/Src/MPU9250.c(482): error: use of undeclared identifier 'mag_bias'
+        mag_bias[2] = (mag_max[2] + mag_min[2])/2;
+        ^
+../Core/Src/MPU9250.c(484): error: use of undeclared identifier 'mag_offset'
+        mag_offset[0] = (float)(mag_bias[0]) * mag_sensitivity * asax;
+        ^
+../Core/Src/MPU9250.c(484): error: use of undeclared identifier 'mag_bias'
+        mag_offset[0] = (float)(mag_bias[0]) * mag_sensitivity * asax;
+                                ^
+../Core/Src/MPU9250.c(484): error: use of undeclared identifier 'asax'
+        mag_offset[0] = (float)(mag_bias[0]) * mag_sensitivity * asax;
+                                                                 ^
+../Core/Src/MPU9250.c(485): error: use of undeclared identifier 'mag_offset'
+        mag_offset[1] = (float)(mag_bias[1]) * mag_sensitivity * asay;
+        ^
+../Core/Src/MPU9250.c(485): error: use of undeclared identifier 'mag_bias'
+        mag_offset[1] = (float)(mag_bias[1]) * mag_sensitivity * asay;
+                                ^
+../Core/Src/MPU9250.c(485): error: use of undeclared identifier 'asay'
+        mag_offset[1] = (float)(mag_bias[1]) * mag_sensitivity * asay;
+                                                                 ^
+../Core/Src/MPU9250.c(486): error: use of undeclared identifier 'mag_offset'
+        mag_offset[2] = (float)(mag_bias[2]) * mag_sensitivity * asaz;
+        ^
+../Core/Src/MPU9250.c(486): error: use of undeclared identifier 'mag_bias'
+        mag_offset[2] = (float)(mag_bias[2]) * mag_sensitivity * asaz;
+                                ^
+../Core/Src/MPU9250.c(486): error: use of undeclared identifier 'asaz'
+        mag_offset[2] = (float)(mag_bias[2]) * mag_sensitivity * asaz;
+                                                                 ^
+../Core/Src/MPU9250.c(488): error: use of undeclared identifier 'mag_scale'
+        mag_scale[0] = (mag_max[0] - mag_min[0])/2;
+        ^
+../Core/Src/MPU9250.c(489): error: use of undeclared identifier 'mag_scale'
+        mag_scale[1] = (mag_max[1] - mag_min[1])/2;
+        ^
+../Core/Src/MPU9250.c(490): error: use of undeclared identifier 'mag_scale'
+        mag_scale[2] = (mag_max[2] - mag_min[2])/2;
+        ^
+../Core/Src/MPU9250.c(492): error: use of undeclared identifier 'scale_x'
+        scale_x = 0,scale_y = 0,scale_z = 0;
+        ^
+../Core/Src/MPU9250.c(492): error: use of undeclared identifier 'scale_y'
+        scale_x = 0,scale_y = 0,scale_z = 0;
                     ^
-../Core/Src/MPU9250.c(544): note: use function 'fabsf' instead
-                if (abs(sinp) >= 1)
-                    ^~~
-                    fabsf
-1 warning generated.
+../Core/Src/MPU9250.c(492): error: use of undeclared identifier 'scale_z'
+        scale_x = 0,scale_y = 0,scale_z = 0;
+                                ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
 compiling MPU9250.c...
-compiling stm32f4xx_hal_flash_ramfunc.c...
-compiling stm32f4xx_hal_flash.c...
-compiling stm32f4xx_hal_pwr.c...
-compiling stm32f4xx_hal_flash_ex.c...
-compiling stm32f4xx_hal_gpio.c...
-compiling stm32f4xx_hal_rcc_ex.c...
-compiling stm32f4xx_hal_dma_ex.c...
-compiling stm32f4xx_hal_rcc.c...
-compiling stm32f4xx_hal_dma.c...
-compiling stm32f4xx_hal_pwr_ex.c...
-compiling stm32f4xx_hal_spi.c...
-compiling stm32f4xx_hal_cortex.c...
-compiling stm32f4xx_hal.c...
-compiling stm32f4xx_hal_exti.c...
-compiling system_stm32f4xx.c...
-compiling stm32f4xx_hal_tim_ex.c...
-compiling stm32f4xx_hal_uart.c...
-compiling stm32f4xx_hal_tim.c...
-linking...
-Program Size: Code=18896 RO-data=688 RW-data=32 ZI-data=1368  
-FromELF: creating hex file...
-"GPIO_LED\GPIO_LED.axf" - 0 Error(s), 1 Warning(s).
-Build Time Elapsed:  00:00:04
+compiling main.c...
+"GPIO_LED\GPIO_LED.axf" - 19 Error(s), 0 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:03

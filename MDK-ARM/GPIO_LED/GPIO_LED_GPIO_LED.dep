@@ -1,10 +1,10 @@
 Dependencies for Project 'GPIO_LED', Target 'GPIO_LED': (DO NOT MODIFY !)
 CompilerVersion: 6190000::V6.19::ARMCLANG
 F (startup_stm32f415xx.s)(0x646E7CAB)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__MICROLIB SETA 1"-I./RTE/_GPIO_LED-I"D:/Program Files/Keil/ARM/PACK/ARM/CMSIS/5.9.0/CMSIS/Core/Include"-I"D:/Program Files/Keil/ARM/PACK/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include"-Wa,armasm,--pd,"__UVISION_VERSION SETA 538" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F415xx SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o gpio_led/startup_stm32f415xx.o)
-F (..\Core\Inc\MPU9250.h)(0x646E8038)()
+F (..\Core\Inc\MPU9250.h)(0x6474BF30)()
 F (..\Core\Inc\MPU9250_Config.h)(0x646546F5)()
-F (..\Core\Src\MPU9250.c)(0x646ED8E2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Core/Src-I./RTE/_GPIO_LED-I"D:/Program Files/Keil/ARM/PACK/ARM/CMSIS/5.9.0/CMSIS/Core/Include"-I"D:/Program Files/Keil/ARM/PACK/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include"-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F415xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F415xx-o gpio_led/mpu9250.o -MD)
-I (..\Core\Inc\MPU9250.h)(0x646E8038)
+F (..\Core\Src\MPU9250.c)(0x6474BF30)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Core/Src-I./RTE/_GPIO_LED-I"D:/Program Files/Keil/ARM/PACK/ARM/CMSIS/5.9.0/CMSIS/Core/Include"-I"D:/Program Files/Keil/ARM/PACK/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include"-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F415xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F415xx-o gpio_led/mpu9250.o -MD)
+I (..\Core\Inc\MPU9250.h)(0x6474BF30)
 I (..\Core\Inc\main.h)(0x646E20D1)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x646520B6)
 I (..\Core\Inc\stm32f4xx_hal_conf.h)(0x646E72A0)
@@ -89,7 +89,7 @@ I (..\Core\Inc\tim.h)(0x646E729F)
 I (..\Core\Inc\usart.h)(0x64652DEF)
 I (..\Core\Inc\gpio.h)(0x646520B8)
 I (D:\Program Files\Keil\ARM\ARMCLANG\include\stdio.h)(0x6388F1C8)
-I (..\Core\Inc\MPU9250.h)(0x646E8038)
+I (..\Core\Inc\MPU9250.h)(0x6474BF30)
 I (..\Core\Inc\MPU9250_Config.h)(0x646546F5)
 I (..\Core\Inc\Madgwick.h)(0x646E6876)
 I (D:\Program Files\Keil\ARM\ARMCLANG\include\math.h)(0x6388F1C8)

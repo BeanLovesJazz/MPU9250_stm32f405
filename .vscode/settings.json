@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "main.h": "c"
-    }
+    },
+    "C_Cpp.default.compilerPath": "g:\\STM32\\GPIO\\GPIO_LED\\.vscode\\settings.json"
 }
